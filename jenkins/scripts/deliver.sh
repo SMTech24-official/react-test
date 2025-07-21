@@ -5,12 +5,12 @@ set -x
 npm run build
 set +x
 
-echo 'Starting the Vite dev server in the background...'
+echo 'Starting the production server using PM2...'
 set -x
-npm run dev &    # Vite's dev command
+npm start
 sleep 1
-echo $! > .pidfile
+# Save PM2's process ID file manually if needed; otherwise use `pm2 delete` in kill.sh
 set +x
 
 echo 'Now...'
-echo 'Visit http://localhost:3000 to see your Vite app in action.'
+echo 'Visit http://localhost:3001 to see your production React app running.'

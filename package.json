@@ -8,11 +8,14 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "serve": "serve -s dist -l 3001",
+    "start": "pm2 start npm --name react-test -- run serve --no-clipboard"
   },
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "serve": "^14.2.4",
     "vitest": "^3.2.4"
   },
   "devDependencies": {
