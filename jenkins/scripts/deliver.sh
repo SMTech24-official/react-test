@@ -13,4 +13,4 @@ sleep 1
 set +x
 
 echo 'Now...'
-echo 'Visit http://localhost:3001 to see your production React app running.'
+echo 'Visit http://localhost:3000 to see your production React app running.'
