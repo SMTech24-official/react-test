@@ -7,10 +7,19 @@ set +x
 
 echo 'Starting the production server using PM2...'
 set -x
-npm start
-sleep 1
-# Save PM2's process ID file manually if needed; otherwise use `pm2 delete` in kill.sh
+
+# Ensure PM2 is installed globally
+npm install -g pm2
+
+# Remove old process if exists
+pm2 delete react-test || true
+
+# Start with PM2
+pm2 start npm --name react-test -- run serve --no-clipboard
+
+# Persist process list
+pm2 save
+
 set +x
 
-echo 'Now...'
-echo 'Visit http://localhost:3000 to see your production React app running.'
+echo 'App running at http://localhost:3000'
