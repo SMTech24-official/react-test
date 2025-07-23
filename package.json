@@ -9,8 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",
-    "serve": "serve -s dist -l 3000",
-    "start": "pm2 start npm --name react-test -- run serve --no-clipboard"
+    "serve": "serve -s dist -l 3000"
   },
   "dependencies": {
     "react": "^19.1.0",

@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+set -e  # stop on any command failure
 
 echo 'Building the Vite app...'
 set -x
@@ -7,10 +8,10 @@ set +x
 
 echo 'Starting the production server using PM2...'
 set -x
-npm start
-sleep 1
-# Save PM2's process ID file manually if needed; otherwise use `pm2 delete` in kill.sh
+npm install -g pm2
+pm2 delete react-test || true
+pm2 start npm --name react-test -- run serve --no-clipboard
+pm2 save
 set +x
 
-echo 'Now...'
-echo 'Visit http://localhost:3000 to see your production React app running.'
+echo 'App running at http://localhost:3000'
