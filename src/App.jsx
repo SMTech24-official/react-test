@@ -16,11 +16,15 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h2>test from euhan sarkar 2</h2>
+      <h1>Vite + React 2</h1>
+      <h1>this si fully new text</h1>
+      <h1>this si fully new text</h1>
+      <h1>this si fully new text</h1>
+      <h1>Vite + React euhan hello world 2</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
-          
         </button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
@@ -30,7 +34,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
 export default App
